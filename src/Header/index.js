@@ -4,19 +4,30 @@ import { Button, Icon } from "@material-ui/core/";
 import { Styl } from "react-dom";
 import logo from '../assets/rocketeer.png'
 import './style.css'
+import { Link } from "react-router-dom";
 
-export default class Menu extends Component {
+export default class Header extends Component {
     render() {
         return (
             <div style={styles.container}>
                 <div>
+                    <Link to='/about' style={{ textDecoration: 'none' }}>
                     <Button style={{ width: 90 }}>About</Button>
+                    </Link>
+                    <Link to='/blog' style={{ textDecoration: 'none' }}>
                     <Button style={{ width: 90 }}>Blog</Button>
+                    </Link>
                 </div>
+                <Link to='/' style={{ textDecoration: 'none' }}>
                 <img src={logo} width={160} />
+                </Link>
                 <div>
+                <Link to='/projects' style={{ textDecoration: 'none' }}>
                     <Button style={{ width: 90 }}>Projects</Button>
+                    </Link>
+                    <Link to='/contact' style={{ textDecoration: 'none' }}>
                     <Button style={{ width: 90 }}>Contact</Button>
+                    </Link>
                 </div>
             </div>
         )
