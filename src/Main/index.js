@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import { About, Home, Blog, Projects, Contact } from "../routes";
+import { About, Home, Blog, Projects, Contact, PageNotFound } from "../routes";
 
 export default class Main extends Component {
 
@@ -31,6 +31,7 @@ export default class Main extends Component {
                     <Route exact path='/projects' component={Projects} />
                     <Route exact path='/blog' component={Blog} />
                     <Route exact path='/contact' component={Contact} />
+                    <Route component={PageNotFound}/>
                 </Switch>
                 </div>
             </main>
