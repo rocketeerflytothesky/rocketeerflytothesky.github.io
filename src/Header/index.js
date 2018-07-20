@@ -1,18 +1,19 @@
 
 import React, { Component } from "react";
-import { Button, Icon } from "@material-ui/core/";
-import { Styl } from "react-dom";
+import { Button } from "@material-ui/core/";
 import logo from '../assets/rocketeer.png'
 import './style.css'
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-export default class Header extends Component {
+class _Header extends Component {
+
     render() {
+        console.log('current location ', this.props.location)
         return (
             <div style={styles.container}>
                 <div>
-                    <Link to='/about' style={{ textDecoration: 'none' }}>
-                    <Button style={{ width: 90 }}>About</Button>
+                    <Link to='/about' style={{ textDecoration: 'none'}}>
+                    <Button style={{ width: 90, borderWidth: 1, borderColor: '#EFEFEF'  }}>About</Button>
                     </Link>
                     <Link to='/blog' style={{ textDecoration: 'none' }}>
                     <Button style={{ width: 90 }}>Blog</Button>
@@ -33,7 +34,6 @@ export default class Header extends Component {
         )
     }
 }
-
 const styles = {
     container: {
         flexDirection: 'row',
@@ -42,5 +42,9 @@ const styles = {
         flex: 1,
         display: 'flex',
         flexWrap: 'wrap',
+        marginBottom: 32,
     }
 }
+
+export default withRouter(_Header)
+

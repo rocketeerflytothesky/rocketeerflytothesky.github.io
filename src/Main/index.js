@@ -1,40 +1,30 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-
-const Home = () => (
-    <div>
-        <text>Home page</text>
-    </div>
-)
-
-const About = () => (
-    <div>
-        <text>About page</text>
-    </div>
-)
-
-const Blog = () => (
-    <div>
-        <text>Blog page</text>
-    </div>
-)
-
-const Projects = () => (
-    <div>
-        <text>Projects page</text>
-    </div>
-)
-
-const Contact = () => (
-    <div>
-        <text>Contact page</text>
-    </div>
-)
+import { About, Home, Blog, Projects, Contact } from "../routes";
 
 export default class Main extends Component {
+
+    state = {
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+    }
+
+    componentDidMount() {
+        this.updateDeminsions()
+        window.addEventListener('resize', this.updateDeminsions.bind(this))
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDeminsions.bind(this))
+      }
+
+    updateDeminsions() {
+        this.setState({windowWidth: window.innerWidth, windowHeight: window.innerHeight})
+    } 
     render() {
         return (
-            <main>
+            <main style={{flex: 1, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
+            <div style={{minHeight: this.state.windowHeight - 145, maxWidth: 800, width: '100%'}}>
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/about' component={About} />
@@ -42,6 +32,7 @@ export default class Main extends Component {
                     <Route exact path='/blog' component={Blog} />
                     <Route exact path='/contact' component={Contact} />
                 </Switch>
+                </div>
             </main>
         )
     }
