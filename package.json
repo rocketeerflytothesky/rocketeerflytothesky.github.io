@@ -1,22 +1,37 @@
 {
   "name": "rocketeerflytothesky.github.io",
-  "version": "0.1.0",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "private": true,
-  "homepage": "https://rocketeerflytothesky.github.io",
+  "homepage": "https://rocketeerflytothesky.github.io/",
   "dependencies": {
     "@material-ui/core": "^1.4.0",
-    "gh-pages": "^1.2.0",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-helmet": "^5.2.0"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b master",
-    "eject": "react-scripts eject"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master --repo https://github.com/rocketeerflytothesky/rocketeerflytothesky.github.io.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "prettier": "^1.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }
