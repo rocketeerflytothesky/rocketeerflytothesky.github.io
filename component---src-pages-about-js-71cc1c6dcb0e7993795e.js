@@ -1,0 +1,2 @@
+webpackJsonp([0xefeaa6d1881d],{686:function(e,t,u){e.exports=u.p+"static/me.ba5cec4f.jpg"},461:function(e,t,u){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=u(2),c=a(n),f=u(686),l=a(f),d=function(){return c.default.createElement("div",null,c.default.createElement("img",{src:l.default}))};t.default=d,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-about-js-71cc1c6dcb0e7993795e.js.map
