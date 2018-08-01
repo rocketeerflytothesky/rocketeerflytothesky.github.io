@@ -1,2 +1,0 @@
-webpackJsonp([70144966829960],{463:function(e,t,l){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=l(2),a=u(n),r=function(){return a.default.createElement("div",null,a.default.createElement("text",null,"Vo Truong Thi"),a.default.createElement("text",null,"email: thitruongvo@gmail.com"),a.default.createElement("text",null,"address: HCM, Vietnam"))};t.default=r,e.exports=t.default}});
-//# sourceMappingURL=component---src-pages-contact-js-dcf67907a4e70d884858.js.map

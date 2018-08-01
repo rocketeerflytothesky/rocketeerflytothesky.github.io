@@ -1,14 +1,45 @@
 import React, { Component } from "react";
+import Link from "gatsby-link";
 
-export default class Blog extends Component {
-    render() {
-        return (
+const IndexPage = ({data}) => {
+    const {edges: posts} = data.allMarkdownRemark;
+    return (
+      <div>
+        {posts.map (({node: post}) => {
+          const {frontmatter} = post;
+          return (
             <div>
-                <text>Blog 1</text>
-                <text>Blog 2</text>
-                <text>Blog 3</text>
-                <text>Blog 4</text>
+              <h2>
+                <Link to={frontmatter.path}>
+                  {frontmatter.title}
+                </Link>
+              </h2>
+              <p>{frontmatter.date}</p>
+              <p>{frontmatter.excerpt}</p>
             </div>
-        )
+          );
+        })}
+      </div>
+    );
+  };
+
+  export const query = graphql`
+  query IndexQuery {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            path
+            tags
+            excerpt
+          }
+        }
+      }
     }
-}
+  }
+`;
+export default IndexPage
