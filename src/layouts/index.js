@@ -43,7 +43,7 @@ class Layout extends Component {
         <main style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
           <div
             style={{
-              minHeight: this.state.windowHeight - 205, maxWidth: 800, width: '100%', backgroundColor: 'green'
+              minHeight: this.state.windowHeight - 205, maxWidth: 800, width: '100%'
             }}
           >
             {children()}
