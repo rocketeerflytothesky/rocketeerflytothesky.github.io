@@ -33,25 +33,18 @@ export default class Header extends Component {
         console.log('selected Index ', selectedMenuIndex)
         return (
             <div style={styles.container}>
-                <div>
-                    <Link to='/about' style={{ textDecoration: 'none'}}>
-                    <Button style={selectedMenuIndex=== 1 ? styles.buttonBordered : styles.button}>About</Button>
-                    </Link>
-                    <Link to='/blog' style={{ textDecoration: 'none' }}>
-                    <Button style={selectedMenuIndex=== 2 ? styles.buttonBordered : styles.button }>Blog</Button>
-                    </Link>
-                </div>
-                <Link to='/' style={{ textDecoration: 'none', justifyContent: 'center', alignItems: 'center', height: 80 }}>
-                    <img src={logo} width={180}/>
+                <Link to='/about' style={selectedMenuIndex === 1 ? styles.linkHighlight : styles.link}>
+                    <Button style={styles.button}>About</Button>
                 </Link>
-                <div>
-                <Link to='/projects' style={{ textDecoration: 'none' }}>
-                    <Button style={selectedMenuIndex=== 3 ? styles.buttonBordered : styles.button }>Projects</Button>
-                    </Link>
-                    <Link to='/contact' style={{ textDecoration: 'none' }}>
-                    <Button style={selectedMenuIndex=== 4 ? styles.buttonBordered : styles.button}>Contact</Button>
-                    </Link>
-                </div>
+                <Link to='/blog' style={selectedMenuIndex === 2 ? styles.linkHighlight : styles.link}>
+                    <Button style={styles.button}>Blog</Button>
+                </Link>
+                <Link to='/projects' style={selectedMenuIndex === 3 ? styles.linkHighlight : styles.link}>
+                    <Button style={styles.button}>Projects</Button>
+                </Link>
+                <Link to='/contact' style={selectedMenuIndex === 4 ? styles.linkHighlight : styles.link}>
+                    <Button style={styles.button}>Contact</Button>
+                </Link>
             </div>
         )
     }
@@ -67,13 +60,19 @@ const styles = {
         marginBottom: 32,
     },
     button: {
-        width: 90
+        width: 100,
+        color: 'grey',
     },
-    buttonBordered: {
-        width: 90,
-        borderBottomWidth: 2, 
-        borderBottomColor: 'black', 
-        borderBottomStyle: 'solid'
+    linkHighlight: {
+        textDecoration: 'none', 
+        marginRight: 10,
+        borderBottom: 'solid',
+        borderBottomColor: 'grey',
+        borderBottomWidth: 2,
+    },
+    link: {
+        textDecoration: 'none', 
+        marginRight: 10,
     }
 }
 

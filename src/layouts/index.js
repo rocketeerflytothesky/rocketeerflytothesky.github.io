@@ -40,7 +40,7 @@ class Layout extends Component {
           ]}
         />
         <Header location={location} />
-        <main style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+        <main style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display: 'flex', marginTop: 80 }}>
           <div
             style={{
               minHeight: this.state.windowHeight - 205, maxWidth: 800, width: '100%'

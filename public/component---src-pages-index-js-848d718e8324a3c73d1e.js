@@ -1,0 +1,2 @@
+webpackJsonp([35783957827783],{473:function(e,t,u){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=u(2),a=l(n),o=function(){return a.default.createElement("div",null,a.default.createElement("text",{style:{fontSize:32}},"Welcome to my page"))};t.default=o,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-index-js-848d718e8324a3c73d1e.js.map
