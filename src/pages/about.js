@@ -9,11 +9,11 @@ const About = () => (
                 <span style={styles.text}>
                 Hi!<br/>
 Thi is a mobile developer in a outsourcing company.<br/>
-At home, he is indie app developer.<br/>
+At home, he is known as an indie app developer.<br/>
 He also have some experience with backend and design.<br/><br/>
 
-If you want to share something or interested to work with him, feel free to press contact and leave some messages.<br/>
-Peace!<br/>
+If you would like to share something or interested in working with him, feel free to keep in touch.<br/>
+Peace! 🙌<br/>
             </span>
             </div>
         </div>

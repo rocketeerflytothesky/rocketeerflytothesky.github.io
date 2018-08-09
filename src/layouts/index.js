@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { replace } from "gatsby-link";
 import { Footer } from "./Footer";
 import Header from './Header'
 import './index.css'
@@ -26,6 +27,13 @@ class Layout extends Component {
 
   updateDeminsions() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight })
+  }
+
+  componentDidUpdate() {
+    const {pathname} = this.props.location
+    if (pathname === '/') {
+      replace('/about')
+    }
   }
 
   render() {
